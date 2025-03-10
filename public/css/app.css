@@ -1,0 +1,257 @@
+@import "node-modules/bootstrap/scss/bootstrap";
+
+.quote-container {
+    text-align: center;
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.glowing-text {
+    font-size: 0.5rem;
+    font-weight: bold;
+    color: #00ffff; /* Warna Neon Cyan */
+    text-shadow: 
+        0 0 5px #00ffff, 
+        0 0 10px #00ffff, 
+        0 0 20px #00ccff, 
+        0 0 40px #0088ff, 
+        0 0 80px #0055ff;
+    font-family: 'Orbitron', sans-serif;
+    animation: flicker 2s infinite alternate;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+/* Animasi Glow yang lebih smooth */
+@keyframes flicker {
+    0% {
+        opacity: 1;
+        text-shadow: 
+            0 0 5px #00ffff, 
+            0 0 10px #00ffff, 
+            0 0 20px #00ccff, 
+            0 0 40px #0088ff, 
+            0 0 80px #0055ff;
+    }
+    100% {
+        opacity: 0.8;
+        text-shadow: 
+            0 0 10px #00ffff, 
+            0 0 20px #00ccff, 
+            0 0 30px #0088ff, 
+            0 0 50px #0055ff, 
+            0 0 100px #0033ff;
+    }
+}
+
+
+/* Background Gradient Futuristik */
+body {
+    background: radial-gradient(circle at center, #001f3f, #000000);
+    color: white;
+    font-family: 'Orbitron', sans-serif;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+
+/* Efek Animasi Glowing pada Seluruh Halaman */
+@keyframes backgroundGlow {
+    0% { background: radial-gradient(circle at center, #00442d, #000000); }
+    50% { background: radial-gradient(circle at center, #00663a, #000000); }
+    100% { background: radial-gradient(circle at center, #00443a, #000000); }
+}
+body {
+    animation: backgroundGlow 5s infinite alternate;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    padding: 20px;
+    font-size: 2rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #00ccff, 0 0 20px #0088ff;
+}
+
+/* Menu Navigation */
+.navbar {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 10px;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #c1dcc1;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-shadow: 0 0 5px #3aff44;
+    transition: all 0.3s ease-in-out;
+}
+
+.navbar a:hover {
+    color: #ff00ff;
+    text-shadow: 0 0 10px #ff00ff, 0 0 20px #cc00cc;
+}
+
+/* Efek Neon untuk Quotes */
+.quote-container {
+    text-align: center;
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 30vh;
+}
+
+.glowing-text {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #a9dcb4; 
+    text-shadow: 0 0 5px #18e53d, 0 0 10px #18e53d, 0 0 20px #10c92c;
+    animation: flicker 2s infinite alternate;
+    padding: 20px;
+   
+}
+
+@keyframes flicker {
+    0% { opacity: 1; text-shadow: 0 0 3px #19e646, 0 0 7px #0af331, 0 0 15px #25fa73; }
+    100% { opacity: 0.8; text-shadow: 0 0 5px #4fec1b, 0 0 10px #1dcd52, 0 0 20px #199622; }
+}
+
+/* Efek Partikel Floating */
+@keyframes floatingParticles {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.particle {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    background-color: #1cf44f;
+    border-radius: 50%;
+    opacity: 0.5;
+    animation: floatingParticles 4s infinite ease-in-out;
+}
+
+
+.container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.header {
+    font-size: 2rem;
+    text-transform: uppercase;
+    text-shadow: 0 0 10px #1de720, 0 0 20px #00ff66;
+    color: white;
+}
+
+.upload-form {
+    margin-bottom: 20px;
+}
+
+.upload-form input {
+    padding: 8px;
+    border-radius: 5px;
+}
+
+.upload-form button {
+    padding: 8px 15px;
+    background-color: #33dd1d;
+    color: black;
+    border: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.upload-form button:hover {
+    background-color: #ff00ff;
+    color: white;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    gap: 15px;
+    padding: 20px;
+}
+
+.gallery-item {
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.1);
+}
+
+.gallery-item img {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.gallery-item form {
+    position: absolute;
+    bottom: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: rgba(0, 0, 0, 0.6);
+    padding: 5px;
+    border-radius: 5px;
+}
+
+.gallery-item form button {
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.gallery-item form button:hover {
+    background-color: darkred;
+}
+
+
+.footer {
+    background: rgba(0, 50, 0, 0.9); /* Warna hijau gelap transparan */
+    color: white;
+    text-align: center;
+    padding: 15px 0;
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.footer-container {
+    max-width: 600px;
+    margin: auto;
+}
+
+.footer-links {
+    margin-top: 5px;
+}
+
+.footer-links a {
+    color: #00ff00; /* Warna hijau neon */
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.footer-links a:hover {
+    color: #00cc00; /* Hijau lebih gelap saat hover */
+}
