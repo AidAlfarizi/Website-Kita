@@ -1,0 +1,3 @@
+[phase.setup]
+
+nixPkgs = ["php81", "composer", "nodejs"]
